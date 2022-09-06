@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vista", "Vista\Vista.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelo", "Modelo\Modelo.csproj", "{E57257C4-54BF-467E-B4F3-185111B30E28}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{270C94AF-C0B7-4147-813B-EB3D4F2F2281}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{50C4C44C-AA76-41DC-B138-A64527D6FB4A}"
 	ProjectSection(SolutionItems) = preProject
-		C:\Users\Norman Ruiz\Downloads\CATALOGO_DB_v2.sql = C:\Users\Norman Ruiz\Downloads\CATALOGO_DB_v2.sql
+		assets\CATALOGO_DB_v2.sql = assets\CATALOGO_DB_v2.sql
 	EndProjectSection
 EndProject
 Global

@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32630.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vista", "Vista\Vista.csproj", "{BC695ED8-695B-4C3E-A84B-A8EECE123A6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelo", "Modelo\Modelo.csproj", "{E57257C4-54BF-467E-B4F3-185111B30E28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{270C94AF-C0B7-4147-813B-EB3D4F2F2281}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\Norman Ruiz\Downloads\CATALOGO_DB_v2.sql = C:\Users\Norman Ruiz\Downloads\CATALOGO_DB_v2.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC695ED8-695B-4C3E-A84B-A8EECE123A6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC695ED8-695B-4C3E-A84B-A8EECE123A6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC695ED8-695B-4C3E-A84B-A8EECE123A6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC695ED8-695B-4C3E-A84B-A8EECE123A6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E57257C4-54BF-467E-B4F3-185111B30E28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E57257C4-54BF-467E-B4F3-185111B30E28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E57257C4-54BF-467E-B4F3-185111B30E28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E57257C4-54BF-467E-B4F3-185111B30E28}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C426D236-46B6-4C5B-992A-31371CE053D6}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,10 @@
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\bin\Debug\Vista.exe.config
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\bin\Debug\Vista.exe
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\bin\Debug\Vista.pdb
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.csproj.AssemblyReference.cache
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.frmListado.resources
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.Properties.Resources.resources
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.csproj.GenerateResource.cache
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.csproj.CoreCompileInputs.cache
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.exe
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.pdb

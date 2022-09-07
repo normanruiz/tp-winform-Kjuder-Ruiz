@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-     class Marca
+    class Categoria
     {
         public int Id { get; set; }
         public string Descripcion { get; set; }
-
     }
 }

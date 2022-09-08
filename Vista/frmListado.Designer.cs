@@ -73,6 +73,7 @@ namespace Vista
             this.btnDetalle.TabIndex = 2;
             this.btnDetalle.Text = "Detalle";
             this.btnDetalle.UseVisualStyleBackColor = false;
+            this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
             // 
             // tbxFiltro
             // 

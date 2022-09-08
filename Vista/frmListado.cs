@@ -31,5 +31,16 @@ namespace Vista
         {
             Application.Exit();
         }
+
+        private void btnDetalle_Click(object sender, EventArgs e)
+        {
+            foreach ( var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(Detalles)) return;
+            }
+            Detalles formulario = new Detalles();
+            formulario.Show();
+
+        }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Modelo;
 
 namespace Vista
 {
@@ -41,6 +42,19 @@ namespace Vista
             Detalles formulario = new Detalles();
             formulario.Show();
 
+        }
+
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            frmCreaActuliza VentanaCrear = new frmCreaActuliza();
+            VentanaCrear.ShowDialog();
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            Articulo articulo = new Articulo();
+            frmCreaActuliza VentanaCrear = new frmCreaActuliza(articulo);
+            VentanaCrear.ShowDialog();
         }
     }
 }

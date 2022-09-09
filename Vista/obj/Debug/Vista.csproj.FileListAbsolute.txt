@@ -20,3 +20,8 @@ C:\Users\juamp\Desktop\Nueva carpeta\tp-winform-Kjuder-Ruiz\Vista\obj\Debug\Vist
 C:\Users\juamp\Desktop\Nueva carpeta\tp-winform-Kjuder-Ruiz\Vista\obj\Debug\Vista.exe
 C:\Users\juamp\Desktop\Nueva carpeta\tp-winform-Kjuder-Ruiz\Vista\obj\Debug\Vista.pdb
 C:\Users\juamp\Desktop\Nueva carpeta\tp-winform-Kjuder-Ruiz\Vista\obj\Debug\Vista.Detalles.resources
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.Detalles.resources
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.frmCreaActuliza.resources
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\bin\Debug\Modelo.dll
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\bin\Debug\Modelo.pdb
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.csproj.CopyComplete

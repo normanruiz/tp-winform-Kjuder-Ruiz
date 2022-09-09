@@ -78,11 +78,11 @@ namespace Vista
             // tbxFiltro
             // 
             this.tbxFiltro.BackColor = System.Drawing.Color.Teal;
-            this.tbxFiltro.Font = new System.Drawing.Font("Mongolian Baiti", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxFiltro.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxFiltro.Location = new System.Drawing.Point(71, 52);
             this.tbxFiltro.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbxFiltro.Name = "tbxFiltro";
-            this.tbxFiltro.Size = new System.Drawing.Size(367, 20);
+            this.tbxFiltro.Size = new System.Drawing.Size(367, 23);
             this.tbxFiltro.TabIndex = 3;
             // 
             // btnCrear
@@ -96,6 +96,7 @@ namespace Vista
             this.btnCrear.TabIndex = 4;
             this.btnCrear.Text = "Crear";
             this.btnCrear.UseVisualStyleBackColor = false;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // btnBuscar
             // 
@@ -120,6 +121,7 @@ namespace Vista
             this.btnActualizar.TabIndex = 6;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnEliminar
             // 
@@ -162,6 +164,7 @@ namespace Vista
             this.Controls.Add(this.dgvListado);
             this.Controls.Add(this.lblTitulo);
             this.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmListado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

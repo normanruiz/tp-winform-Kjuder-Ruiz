@@ -59,6 +59,8 @@ namespace Vista
             this.dgvListado.Location = new System.Drawing.Point(28, 90);
             this.dgvListado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvListado.Name = "dgvListado";
+            this.dgvListado.ReadOnly = true;
+            this.dgvListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListado.Size = new System.Drawing.Size(614, 387);
             this.dgvListado.TabIndex = 1;
             // 
@@ -169,6 +171,7 @@ namespace Vista
             this.Name = "frmListado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Catalogo de articulos ";
+            this.Load += new System.EventHandler(this.frmListado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -1,0 +1,9 @@
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Controlador\bin\Debug\Controlador.dll
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Controlador\bin\Debug\Controlador.pdb
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Controlador\bin\Debug\Modelo.dll
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Controlador\bin\Debug\Modelo.pdb
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Controlador\obj\Debug\Controlador.csproj.AssemblyReference.cache
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Controlador\obj\Debug\Controlador.csproj.CoreCompileInputs.cache
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Controlador\obj\Debug\Controlador.csproj.CopyComplete
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Controlador\obj\Debug\Controlador.dll
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Controlador\obj\Debug\Controlador.pdb

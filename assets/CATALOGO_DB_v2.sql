@@ -99,3 +99,23 @@ insert into ARTICULOS values ('S01', 'Galaxy S10', 'Una canoa cara', 1, 1, 'http
 ('A23', 'Apple TV', 'lindo loro', 2, 3, 'https://cnnespanol2.files.wordpress.com/2015/12/gadgets-mc3a1s-populares-apple-tv-2015-18.jpg?quality=100&strip=info&w=460&h=260&crop=1', 7850)
 
 select * from ARTICULOS
+
+
+
+SELECT a.[Id]
+      ,a.[Codigo]
+      ,a.[Nombre]
+      ,a.[Descripcion]
+      ,a.[IdMarca]
+	  ,m.[Descripcion]
+      ,a.[IdCategoria]
+	  ,c.[Descripcion]
+      ,a.[ImagenUrl]
+      ,a.[Precio]
+       FROM [CATALOGO_DB].[dbo].[ARTICULOS] AS a WITH (NOLOCK)
+			INNER JOIN [CATALOGO_DB].[dbo].[CATEGORIAS] AS c WITH (NOLOCK)
+				  ON c.[Id] = a.[IdCategoria]
+			INNER JOIN [CATALOGO_DB].[dbo].[MARCAS] AS m WITH (NOLOCK)
+				  ON m.[Id] = a.[IdCategoria]
+
+SELECT a.[Id], a.[Codigo], a.[Nombre], a.[Descripcion], a.[IdMarca], m.[Descripcion], a.[IdCategoria], c.[Descripcion], a.[ImagenUrl], a.[Precio] FROM [CATALOGO_DB].[dbo].[ARTICULOS] AS a WITH (NOLOCK) INNER JOIN [CATALOGO_DB].[dbo].[CATEGORIAS] AS c WITH (NOLOCK)ON c.[Id] = a.[IdCategoria] INNER JOIN [CATALOGO_DB].[dbo].[MARCAS] AS m WITH (NOLOCK)ON m.[Id] = a.[IdCategoria];

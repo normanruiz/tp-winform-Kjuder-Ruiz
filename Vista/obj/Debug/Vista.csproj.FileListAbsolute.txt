@@ -25,3 +25,5 @@ D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.frmCreaActuliza.r
 D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\bin\Debug\Modelo.dll
 D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\bin\Debug\Modelo.pdb
 D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.csproj.CopyComplete
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\bin\Debug\Controlador.dll
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\bin\Debug\Controlador.pdb

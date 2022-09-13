@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Modelo;
+using Controlador;
 
 namespace Vista
 {
@@ -33,7 +34,20 @@ namespace Vista
 
         private void frmCreaActuliza_Load(object sender, EventArgs e)
         {
+            CargarMarcas();
+        }
 
+        private void CargarMarcas()
+        {
+            MarcaNegocio marcaNegocio = new MarcaNegocio();
+            try
+            {
+                cbxMarca.DataSource = marcaNegocio.listar();
+            }
+            catch (Exception excepcion)
+            {
+                MessageBox.Show("Verificar la conexion y/o configuracion", "Base de Datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

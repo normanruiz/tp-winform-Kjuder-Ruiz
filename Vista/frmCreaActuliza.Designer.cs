@@ -173,6 +173,7 @@ namespace Vista
             // cbxMarca
             // 
             this.cbxMarca.BackColor = System.Drawing.Color.Teal;
+            this.cbxMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxMarca.FormattingEnabled = true;
             this.cbxMarca.Location = new System.Drawing.Point(108, 312);
             this.cbxMarca.Name = "cbxMarca";
@@ -182,6 +183,7 @@ namespace Vista
             // cbxCategoria
             // 
             this.cbxCategoria.BackColor = System.Drawing.Color.Teal;
+            this.cbxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCategoria.FormattingEnabled = true;
             this.cbxCategoria.Location = new System.Drawing.Point(108, 348);
             this.cbxCategoria.Name = "cbxCategoria";

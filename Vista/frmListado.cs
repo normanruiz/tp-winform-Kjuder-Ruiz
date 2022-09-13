@@ -67,6 +67,8 @@ namespace Vista
             this.dgvListado.Columns["Categoria"].Visible = false;
             this.dgvListado.Columns["ImagenURL"].Visible = false;
             this.dgvListado.Columns["Nombre"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvListado.Columns["Precio"].DefaultCellStyle.Format = "C";
+            this.dgvListado.Columns["Precio"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
         }
 
         private void actualizarListado()

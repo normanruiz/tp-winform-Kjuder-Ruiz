@@ -119,3 +119,11 @@ SELECT a.[Id]
 				  ON m.[Id] = a.[IdCategoria]
 
 SELECT a.[Id], a.[Codigo], a.[Nombre], a.[Descripcion], a.[IdMarca], m.[Descripcion], a.[IdCategoria], c.[Descripcion], a.[ImagenUrl], a.[Precio] FROM [CATALOGO_DB].[dbo].[ARTICULOS] AS a WITH (NOLOCK) INNER JOIN [CATALOGO_DB].[dbo].[CATEGORIAS] AS c WITH (NOLOCK)ON c.[Id] = a.[IdCategoria] INNER JOIN [CATALOGO_DB].[dbo].[MARCAS] AS m WITH (NOLOCK)ON m.[Id] = a.[IdCategoria];
+
+
+SELECT m.[Id]
+      ,m.[Descripcion]
+       FROM [CATALOGO_DB].[dbo].[MARCAS] AS m WITH (NOLOCK)
+
+SELECT m.[Id], m.[Descripcion] FROM [CATALOGO_DB].[dbo].[MARCAS] AS m WITH (NOLOCK);
+

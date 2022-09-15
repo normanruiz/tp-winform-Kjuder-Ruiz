@@ -34,10 +34,10 @@ namespace Vista
             this.btnDetalle = new System.Windows.Forms.Button();
             this.tbxFiltro = new System.Windows.Forms.TextBox();
             this.btnCrear = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.lblFiltro = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,10 +56,11 @@ namespace Vista
             // dgvListado
             // 
             this.dgvListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListado.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvListado.Location = new System.Drawing.Point(28, 90);
             this.dgvListado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvListado.MultiSelect = false;
             this.dgvListado.Name = "dgvListado";
-            this.dgvListado.ReadOnly = true;
             this.dgvListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListado.Size = new System.Drawing.Size(614, 387);
             this.dgvListado.TabIndex = 1;
@@ -81,11 +82,12 @@ namespace Vista
             // 
             this.tbxFiltro.BackColor = System.Drawing.Color.Teal;
             this.tbxFiltro.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxFiltro.Location = new System.Drawing.Point(71, 52);
+            this.tbxFiltro.Location = new System.Drawing.Point(186, 56);
             this.tbxFiltro.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbxFiltro.Name = "tbxFiltro";
             this.tbxFiltro.Size = new System.Drawing.Size(367, 23);
             this.tbxFiltro.TabIndex = 3;
+            this.tbxFiltro.TextChanged += new System.EventHandler(this.tbxFiltro_TextChanged);
             // 
             // btnCrear
             // 
@@ -99,18 +101,6 @@ namespace Vista
             this.btnCrear.Text = "Crear";
             this.btnCrear.UseVisualStyleBackColor = false;
             this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.Teal;
-            this.btnBuscar.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(456, 48);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(140, 31);
-            this.btnBuscar.TabIndex = 5;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
             // 
             // btnActualizar
             // 
@@ -150,16 +140,26 @@ namespace Vista
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
+            // lblFiltro
+            // 
+            this.lblFiltro.AutoSize = true;
+            this.lblFiltro.ForeColor = System.Drawing.Color.White;
+            this.lblFiltro.Location = new System.Drawing.Point(102, 60);
+            this.lblFiltro.Name = "lblFiltro";
+            this.lblFiltro.Size = new System.Drawing.Size(47, 15);
+            this.lblFiltro.TabIndex = 9;
+            this.lblFiltro.Text = "Filtro: ";
+            // 
             // frmListado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(820, 496);
+            this.Controls.Add(this.lblFiltro);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
-            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.tbxFiltro);
             this.Controls.Add(this.btnDetalle);
@@ -185,10 +185,10 @@ namespace Vista
         private System.Windows.Forms.Button btnDetalle;
         private System.Windows.Forms.TextBox tbxFiltro;
         private System.Windows.Forms.Button btnCrear;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Label lblFiltro;
     }
 }
 

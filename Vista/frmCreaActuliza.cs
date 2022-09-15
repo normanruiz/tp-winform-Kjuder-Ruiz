@@ -35,6 +35,7 @@ namespace Vista
         private void frmCreaActuliza_Load(object sender, EventArgs e)
         {
             CargarMarcas();
+            CargarCategorias();
         }
 
         private void CargarMarcas()
@@ -43,6 +44,19 @@ namespace Vista
             try
             {
                 cbxMarca.DataSource = marcaNegocio.listar();
+            }
+            catch (Exception excepcion)
+            {
+                MessageBox.Show("Verificar la conexion y/o configuracion", "Base de Datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void CargarCategorias()
+        {
+            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+            try
+            {
+                cbxCategoria.DataSource = categoriaNegocio.listar();
             }
             catch (Exception excepcion)
             {

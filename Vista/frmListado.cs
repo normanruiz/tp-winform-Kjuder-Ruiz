@@ -14,6 +14,7 @@ namespace Vista
 {
     public partial class frmListado : Form
     {
+        private List<Articulo> listadoArticulos;
         public frmListado()
         {
             InitializeComponent();
@@ -76,11 +77,27 @@ namespace Vista
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
             try
             {
-                dgvListado.DataSource = articuloNegocio.listar();
+                listadoArticulos = articuloNegocio.listar();
+                dgvListado.DataSource = listadoArticulos;
             }
             catch (Exception excepcion)
             {
                 MessageBox.Show("Verificar la conexion y/o configuracion", "Base de Datos",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void tbxFiltro_TextChanged(object sender, EventArgs e)
+        {
+            if(tbxFiltro.Text.Length == 0)
+            {
+                dgvListado.DataSource = listadoArticulos;
+            }
+            else
+            {
+                List<Articulo> listadoFiltrado;
+                string filtro = tbxFiltro.Text;
+                listadoFiltrado = listadoArticulos.FindAll(x => x.Codigo.Contains(filtro) || x.Nombre.ToLower().Contains(filtro.ToLower()) || x.Precio.ToString().Contains(filtro));
+                dgvListado.DataSource = listadoFiltrado;
             }
         }
     }

@@ -63,5 +63,41 @@ namespace Vista
                 MessageBox.Show("Verificar la conexion y/o configuracion", "Base de Datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            Articulo articulo = new Articulo();
+            ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+            try
+            {
+                articulo.Codigo = tbxCodigo.Text;
+                articulo.Nombre = tbxNombre.Text;
+                articulo.Descripcion = tbxDescripcion.Text;
+                articulo.marca = (Marca)cbxMarca.SelectedItem;
+                articulo.categoria = (Categoria)cbxCategoria.SelectedItem;
+                articulo.Precio = Convert.ToDecimal(tbxPrecio.Text);
+                articulo.ImagenUrl = tbxImagenUrl.Text;
+                articuloNegocio.crear(articulo);
+                this.Close();
+            }
+            catch (Exception excepcion)
+            {
+                MessageBox.Show("Todabia no se que paso... Dios!!!!!", "Creando articulo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnCargarImagen_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                pbxImagenUrl.Load(tbxImagenUrl.Text);
+            }
+            catch (Exception excepcion)
+            {
+                pbxImagenUrl.Load("https://www.dotcom-monitor.com/blog/wp-content/uploads/sites/3/2019/09/404-error.jpg");
+                tbxImagenUrl.Text = "";
+                MessageBox.Show(excepcion.ToString(), "Cargando imagen", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

@@ -52,7 +52,31 @@ namespace Controlador
 
         }
 
-
-
+        public void crear(Articulo articulo)
+        {
+            AccesoDatos conexion = new AccesoDatos();
+            try
+            {
+                string consulta = "INSERT INTO[CATALOGO_DB].[dbo].[ARTICULOS]([Codigo], [Nombre], [Descripcion], [IdMarca], [IdCategoria], [ImagenUrl], [Precio]) VALUES(@codigo, @nombre, @descripcion, @idmarca, @idcategoria, @imagenurl, @precio);";
+                conexion.setearParametro("@codigo", articulo.Codigo);
+                conexion.setearParametro("@nombre", articulo.Nombre);
+                conexion.setearParametro("@descripcion", articulo.Descripcion);
+                conexion.setearParametro("@idmarca", articulo.marca.Id);
+                conexion.setearParametro("@idcategoria", articulo.categoria.Id);
+                conexion.setearParametro("@imagenurl", articulo.ImagenUrl);
+                conexion.setearParametro("@precio", articulo.Precio);
+                conexion.conectar();
+                conexion.setearConsulta(consulta);
+                conexion.ejecutarAccion();
+            }
+            catch (Exception excepcion)
+            {
+                throw excepcion;
+            }
+            finally
+            {
+                conexion.cerrar();
+            }
+        }
     }
 }

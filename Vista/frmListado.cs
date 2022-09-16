@@ -50,6 +50,7 @@ namespace Vista
         {
             frmCreaActuliza VentanaCrear = new frmCreaActuliza();
             VentanaCrear.ShowDialog();
+            actualizarListado();
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -57,6 +58,7 @@ namespace Vista
             Articulo articulo = new Articulo();
             frmCreaActuliza VentanaCrear = new frmCreaActuliza(articulo);
             VentanaCrear.ShowDialog();
+            actualizarListado();
         }
 
         private void frmListado_Load(object sender, EventArgs e)

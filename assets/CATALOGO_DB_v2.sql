@@ -127,3 +127,12 @@ SELECT m.[Id]
 
 SELECT m.[Id], m.[Descripcion] FROM [CATALOGO_DB].[dbo].[MARCAS] AS m WITH (NOLOCK);
 
+SELECT c.[Id]
+      ,c.[Descripcion]
+       FROM [CATALOGO_DB].[dbo].[CATEGORIAS] AS c WITH (NOLOCK);
+
+SELECT c.[Id], c.[Descripcion] FROM [CATALOGO_DB].[dbo].[CATEGORIAS] AS c WITH (NOLOCK);
+
+
+INSERT INTO [CATALOGO_DB].[dbo].[ARTICULOS] ([Codigo], [Nombre], [Descripcion], [IdMarca], [IdCategoria], [ImagenUrl], [Precio]) VALUES ();
+

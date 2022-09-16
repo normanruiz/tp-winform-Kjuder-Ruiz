@@ -64,5 +64,30 @@ namespace Controlador
             }
             conexion.Close();
         }
+
+        public void ejecutarAccion()
+        {
+            comando.Connection = conexion;
+            try
+            {
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception excepcion)
+            {
+                throw excepcion;
+            }
+        }
+
+        public void setearParametro(string parametro, Object valor)
+        {
+            try
+            {
+                comando.Parameters.AddWithValue(parametro, valor);
+            }
+            catch (Exception excepcion)
+            {
+                throw excepcion;
+            }
+        }
     }
 }

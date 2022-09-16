@@ -74,6 +74,7 @@ namespace Vista
             this.btnGuardar.TabIndex = 1;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
@@ -97,6 +98,7 @@ namespace Vista
             this.btnCargarImagen.TabIndex = 3;
             this.btnCargarImagen.Text = "Cargar Imagen";
             this.btnCargarImagen.UseVisualStyleBackColor = false;
+            this.btnCargarImagen.Click += new System.EventHandler(this.btnCargarImagen_Click);
             // 
             // tbxImagenUrl
             // 
@@ -112,6 +114,7 @@ namespace Vista
             this.pbxImagenUrl.Location = new System.Drawing.Point(366, 126);
             this.pbxImagenUrl.Name = "pbxImagenUrl";
             this.pbxImagenUrl.Size = new System.Drawing.Size(200, 150);
+            this.pbxImagenUrl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxImagenUrl.TabIndex = 5;
             this.pbxImagenUrl.TabStop = false;
             // 

@@ -55,7 +55,7 @@ namespace Vista
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            Articulo articulo = new Articulo();
+            Articulo articulo = (Articulo)dgvListado.CurrentRow.DataBoundItem;
             frmCreaActuliza VentanaCrear = new frmCreaActuliza(articulo);
             VentanaCrear.ShowDialog();
             actualizarListado();

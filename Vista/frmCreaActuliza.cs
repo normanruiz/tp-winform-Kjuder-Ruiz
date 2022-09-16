@@ -14,17 +14,20 @@ namespace Vista
 {
     public partial class frmCreaActuliza : Form
     {
+        private Articulo articulo = null;
         public frmCreaActuliza()
         {
             InitializeComponent();
             lblTitulo.Text = "Alta de Articulo";
+            articulo = new Articulo();
         }
 
-        public frmCreaActuliza(Articulo ariculo)
+        public frmCreaActuliza(Articulo articulo)
         {
             InitializeComponent();
             lblTitulo.Text = "Actualizacion de Articulo";
             tbxCodigo.Enabled = false;
+            this.articulo = articulo;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -36,6 +39,18 @@ namespace Vista
         {
             CargarMarcas();
             CargarCategorias();
+            if(articulo != null)
+            {
+                lblId.Text = articulo.Id.ToString();
+                tbxCodigo.Text = articulo.Codigo;
+                tbxNombre.Text = articulo.Nombre;
+                tbxDescripcion.Text = articulo.Descripcion;
+                cbxMarca.SelectedValue = articulo.marca.Id;
+                cbxCategoria.SelectedValue = articulo.categoria.Id;
+                tbxPrecio.Text = articulo.Precio.ToString();
+                tbxImagenUrl.Text = articulo.ImagenUrl;
+                CargarImagen();
+            }
         }
 
         private void CargarMarcas()
@@ -44,6 +59,8 @@ namespace Vista
             try
             {
                 cbxMarca.DataSource = marcaNegocio.listar();
+                cbxMarca.ValueMember = "Id";
+                cbxMarca.DisplayMember = "Descripcion";
             }
             catch (Exception excepcion)
             {
@@ -57,6 +74,9 @@ namespace Vista
             try
             {
                 cbxCategoria.DataSource = categoriaNegocio.listar();
+                cbxCategoria.ValueMember = "Id";
+                cbxCategoria.DisplayMember = "Descripcion";
+
             }
             catch (Exception excepcion)
             {
@@ -66,7 +86,7 @@ namespace Vista
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Articulo articulo = new Articulo();
+            
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
             try
             {
@@ -77,7 +97,16 @@ namespace Vista
                 articulo.categoria = (Categoria)cbxCategoria.SelectedItem;
                 articulo.Precio = Convert.ToDecimal(tbxPrecio.Text);
                 articulo.ImagenUrl = tbxImagenUrl.Text;
-                articuloNegocio.crear(articulo);
+
+                if(articulo.Id != 0)
+                {
+                    articuloNegocio.actualizar(articulo);
+                }
+                else
+                {
+                    articuloNegocio.crear(articulo);
+                }
+
                 this.Close();
             }
             catch (Exception excepcion)
@@ -87,6 +116,11 @@ namespace Vista
         }
 
         private void btnCargarImagen_Click(object sender, EventArgs e)
+        {
+            CargarImagen();
+        }
+
+        private void CargarImagen()
         {
             try
             {

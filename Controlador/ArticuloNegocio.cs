@@ -78,5 +78,32 @@ namespace Controlador
                 conexion.cerrar();
             }
         }
+
+        public void actualizar(Articulo articulo)
+        {
+            AccesoDatos conexion = new AccesoDatos();
+            try
+            {
+                string consulta = "UPDATE [CATALOGO_DB].[dbo].[ARTICULOS] SET [Nombre] = @nombre, [Descripcion] = @descripcion, [IdMarca] = @idmarca, [IdCategoria] = @idcategoria, [ImagenUrl] = @imagenurl, [Precio] = @precio WHERE [Id] = @id;";
+                conexion.setearParametro("@id", articulo.Id);
+                conexion.setearParametro("@nombre", articulo.Nombre);
+                conexion.setearParametro("@descripcion", articulo.Descripcion);
+                conexion.setearParametro("@idmarca", articulo.marca.Id);
+                conexion.setearParametro("@idcategoria", articulo.categoria.Id);
+                conexion.setearParametro("@imagenurl", articulo.ImagenUrl);
+                conexion.setearParametro("@precio", articulo.Precio);
+                conexion.conectar();
+                conexion.setearConsulta(consulta);
+                conexion.ejecutarAccion();
+            }
+            catch (Exception excepcion)
+            {
+                throw excepcion;
+            }
+            finally
+            {
+                conexion.cerrar();
+            }
+        }
     }
 }

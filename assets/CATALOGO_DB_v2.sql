@@ -136,3 +136,7 @@ SELECT c.[Id], c.[Descripcion] FROM [CATALOGO_DB].[dbo].[CATEGORIAS] AS c WITH (
 
 INSERT INTO [CATALOGO_DB].[dbo].[ARTICULOS] ([Codigo], [Nombre], [Descripcion], [IdMarca], [IdCategoria], [ImagenUrl], [Precio]) VALUES ();
 
+
+UPDATE [CATALOGO_DB].[dbo].[ARTICULOS] SET [Nombre] = , [Descripcion] = , [IdMarca] = , [IdCategoria] = , [ImagenUrl] = , [Precio] =  WHERE [Id] = ;
+
+

@@ -126,6 +126,7 @@ namespace Vista
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "Destruir";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnSalir
             // 

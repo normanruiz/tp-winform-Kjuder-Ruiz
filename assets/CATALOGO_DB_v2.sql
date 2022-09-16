@@ -140,3 +140,5 @@ INSERT INTO [CATALOGO_DB].[dbo].[ARTICULOS] ([Codigo], [Nombre], [Descripcion], 
 UPDATE [CATALOGO_DB].[dbo].[ARTICULOS] SET [Nombre] = , [Descripcion] = , [IdMarca] = , [IdCategoria] = , [ImagenUrl] = , [Precio] =  WHERE [Id] = ;
 
 
+DELETE FROM [CATALOGO_DB].[dbo].[ARTICULOS] WHERE [Id] = @id;
+

@@ -102,5 +102,26 @@ namespace Vista
                 dgvListado.DataSource = listadoFiltrado;
             }
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+            Articulo articulo;
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("Estas seguro?", "Eliminando articulo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
+                {
+                    articulo = (Articulo)dgvListado.CurrentRow.DataBoundItem;
+                    articuloNegocio.Eliminar(articulo.Id);
+                    actualizarListado();
+                }
+            }
+            catch (Exception excepcion)
+            {
+
+                MessageBox.Show("In your face !!!!", "Eliminando articulo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

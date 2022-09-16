@@ -19,7 +19,6 @@ namespace Vista
         {
             InitializeComponent();
             lblTitulo.Text = "Alta de Articulo";
-            articulo = new Articulo();
         }
 
         public frmCreaActuliza(Articulo articulo)
@@ -90,6 +89,10 @@ namespace Vista
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
             try
             {
+                if(articulo == null)
+                { 
+                    articulo = new Articulo(); 
+                }
                 articulo.Codigo = tbxCodigo.Text;
                 articulo.Nombre = tbxNombre.Text;
                 articulo.Descripcion = tbxDescripcion.Text;

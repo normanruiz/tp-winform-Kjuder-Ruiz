@@ -20,19 +20,17 @@ namespace Vista
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-        }
+            try
+            {
+                Application.Exit();
+            }
+            catch (Exception excepcion)
+            {
 
-        private void btnSalir_Click_1(object sender, EventArgs e)
-        {
-            Application.Exit();
+                MessageBox.Show(excepcion.ToString(), "Cerrando aplicacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnDetalle_Click(object sender, EventArgs e)
@@ -48,30 +46,58 @@ namespace Vista
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            frmCreaActuliza VentanaCrear = new frmCreaActuliza();
-            VentanaCrear.ShowDialog();
-            actualizarListado();
+            try
+            {
+                frmCreaActuliza VentanaCrear = new frmCreaActuliza();
+                VentanaCrear.ShowDialog();
+                actualizarListado();
+            }
+            catch (Exception excepcion)
+            {
+                MessageBox.Show(excepcion.ToString(), "Creando articulo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            Articulo articulo = (Articulo)dgvListado.CurrentRow.DataBoundItem;
-            frmCreaActuliza VentanaCrear = new frmCreaActuliza(articulo);
-            VentanaCrear.ShowDialog();
-            actualizarListado();
+            try
+            {
+                if (dgvListado.CurrentRow != null)
+                {
+                    Articulo articulo = (Articulo)dgvListado.CurrentRow.DataBoundItem;
+                    frmCreaActuliza VentanaCrear = new frmCreaActuliza(articulo);
+                    VentanaCrear.ShowDialog();
+                    actualizarListado();
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar un elemento primero.", "Actualizar articulo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception excepcion)
+            {
+                MessageBox.Show(excepcion.ToString(), "Actualizando articulo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void frmListado_Load(object sender, EventArgs e)
         {
-            actualizarListado();
-            this.dgvListado.Columns["Id"].Visible = false;
-            this.dgvListado.Columns["Descripcion"].Visible = false; 
-            this.dgvListado.Columns["Marca"].Visible = false;
-            this.dgvListado.Columns["Categoria"].Visible = false;
-            this.dgvListado.Columns["ImagenURL"].Visible = false;
-            this.dgvListado.Columns["Nombre"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvListado.Columns["Precio"].DefaultCellStyle.Format = "C";
-            this.dgvListado.Columns["Precio"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            try
+            {
+                actualizarListado();
+                this.dgvListado.Columns["Id"].Visible = false;
+                this.dgvListado.Columns["Descripcion"].Visible = false; 
+                this.dgvListado.Columns["Marca"].Visible = false;
+                this.dgvListado.Columns["Categoria"].Visible = false;
+                this.dgvListado.Columns["ImagenURL"].Visible = false;
+                this.dgvListado.Columns["Nombre"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                this.dgvListado.Columns["Precio"].DefaultCellStyle.Format = "C";
+                this.dgvListado.Columns["Precio"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            }
+            catch (Exception excepcion)
+            {
+                MessageBox.Show(excepcion.ToString(), "Cargando listado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void actualizarListado()
@@ -82,24 +108,35 @@ namespace Vista
                 listadoArticulos = articuloNegocio.listar();
                 dgvListado.DataSource = listadoArticulos;
             }
+            catch (InvalidCastException excepcion)
+            {
+                MessageBox.Show("Verifique los nulos en base de datos", "Actualizando listado",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             catch (Exception excepcion)
             {
-                MessageBox.Show("Verificar la conexion y/o configuracion", "Base de Datos",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(excepcion.ToString(), "Actualizando listado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void tbxFiltro_TextChanged(object sender, EventArgs e)
         {
-            if(tbxFiltro.Text.Length == 0)
+            try
             {
-                dgvListado.DataSource = listadoArticulos;
+                if(tbxFiltro.Text.Length == 0)
+                {
+                    dgvListado.DataSource = listadoArticulos;
+                }
+                else
+                {
+                    List<Articulo> listadoFiltrado;
+                    string filtro = tbxFiltro.Text;
+                    listadoFiltrado = listadoArticulos.FindAll(x => x.Codigo.Contains(filtro) || x.Nombre.ToLower().Contains(filtro.ToLower()) || x.Precio.ToString().Contains(filtro));
+                    dgvListado.DataSource = listadoFiltrado;
+                }
             }
-            else
+            catch (Exception excepcion)
             {
-                List<Articulo> listadoFiltrado;
-                string filtro = tbxFiltro.Text;
-                listadoFiltrado = listadoArticulos.FindAll(x => x.Codigo.Contains(filtro) || x.Nombre.ToLower().Contains(filtro.ToLower()) || x.Precio.ToString().Contains(filtro));
-                dgvListado.DataSource = listadoFiltrado;
+                MessageBox.Show(excepcion.ToString(), "Filtrando articulos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -109,19 +146,30 @@ namespace Vista
             Articulo articulo;
             try
             {
-                DialogResult respuesta = MessageBox.Show("Estas seguro?", "Eliminando articulo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult respuesta = MessageBox.Show("Estas seguro?", "Eliminando articulo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (respuesta == DialogResult.Yes)
-                {
-                    articulo = (Articulo)dgvListado.CurrentRow.DataBoundItem;
-                    articuloNegocio.Eliminar(articulo.Id);
-                    actualizarListado();
+                {   
+                    if(dgvListado.CurrentRow != null)
+                    {
+                        articulo = (Articulo)dgvListado.CurrentRow.DataBoundItem;
+                        articuloNegocio.Eliminar(articulo.Id);
+                        actualizarListado();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Debe seleccionar un elemento primero.", "Eliminar articulo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
+            }
+            catch (NullReferenceException excepcion)
+            {
+                MessageBox.Show("Debe seleccionar un elemento primero.", "Eliminando articulo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception excepcion)
             {
-
-                MessageBox.Show("In your face !!!!", "Eliminando articulo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(excepcion.ToString(), "Eliminando articulo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
     }
 }

@@ -71,7 +71,7 @@ namespace Vista
             this.btnGuardar.Location = new System.Drawing.Point(142, 432);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(140, 31);
-            this.btnGuardar.TabIndex = 1;
+            this.btnGuardar.TabIndex = 8;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -83,7 +83,7 @@ namespace Vista
             this.btnCancelar.Location = new System.Drawing.Point(328, 432);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(140, 31);
-            this.btnCancelar.TabIndex = 2;
+            this.btnCancelar.TabIndex = 9;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -95,7 +95,7 @@ namespace Vista
             this.btnCargarImagen.Location = new System.Drawing.Point(396, 324);
             this.btnCargarImagen.Name = "btnCargarImagen";
             this.btnCargarImagen.Size = new System.Drawing.Size(140, 31);
-            this.btnCargarImagen.TabIndex = 3;
+            this.btnCargarImagen.TabIndex = 7;
             this.btnCargarImagen.Text = "Cargar Imagen";
             this.btnCargarImagen.UseVisualStyleBackColor = false;
             this.btnCargarImagen.Click += new System.EventHandler(this.btnCargarImagen_Click);
@@ -106,7 +106,8 @@ namespace Vista
             this.tbxImagenUrl.Location = new System.Drawing.Point(346, 290);
             this.tbxImagenUrl.Name = "tbxImagenUrl";
             this.tbxImagenUrl.Size = new System.Drawing.Size(240, 20);
-            this.tbxImagenUrl.TabIndex = 4;
+            this.tbxImagenUrl.TabIndex = 6;
+            this.tbxImagenUrl.TextChanged += new System.EventHandler(this.tbxImagenUrl_TextChanged);
             // 
             // pbxImagenUrl
             // 
@@ -181,7 +182,7 @@ namespace Vista
             this.cbxMarca.Location = new System.Drawing.Point(108, 312);
             this.cbxMarca.Name = "cbxMarca";
             this.cbxMarca.Size = new System.Drawing.Size(150, 21);
-            this.cbxMarca.TabIndex = 11;
+            this.cbxMarca.TabIndex = 3;
             // 
             // cbxCategoria
             // 
@@ -191,7 +192,7 @@ namespace Vista
             this.cbxCategoria.Location = new System.Drawing.Point(108, 348);
             this.cbxCategoria.Name = "cbxCategoria";
             this.cbxCategoria.Size = new System.Drawing.Size(150, 21);
-            this.cbxCategoria.TabIndex = 12;
+            this.cbxCategoria.TabIndex = 4;
             // 
             // lblMarca
             // 
@@ -232,7 +233,8 @@ namespace Vista
             this.tbxPrecio.Location = new System.Drawing.Point(108, 384);
             this.tbxPrecio.Name = "tbxPrecio";
             this.tbxPrecio.Size = new System.Drawing.Size(150, 20);
-            this.tbxPrecio.TabIndex = 16;
+            this.tbxPrecio.TabIndex = 5;
+            this.tbxPrecio.TextChanged += new System.EventHandler(this.tbxPrecio_TextChanged);
             // 
             // tbxCodigo
             // 
@@ -240,7 +242,8 @@ namespace Vista
             this.tbxCodigo.Location = new System.Drawing.Point(102, 102);
             this.tbxCodigo.Name = "tbxCodigo";
             this.tbxCodigo.Size = new System.Drawing.Size(204, 20);
-            this.tbxCodigo.TabIndex = 17;
+            this.tbxCodigo.TabIndex = 0;
+            this.tbxCodigo.TextChanged += new System.EventHandler(this.tbxCodigo_TextChanged);
             // 
             // tbxNombre
             // 
@@ -248,7 +251,8 @@ namespace Vista
             this.tbxNombre.Location = new System.Drawing.Point(102, 138);
             this.tbxNombre.Name = "tbxNombre";
             this.tbxNombre.Size = new System.Drawing.Size(204, 20);
-            this.tbxNombre.TabIndex = 18;
+            this.tbxNombre.TabIndex = 1;
+            this.tbxNombre.TextChanged += new System.EventHandler(this.tbxNombre_TextChanged);
             // 
             // tbxDescripcion
             // 
@@ -257,7 +261,8 @@ namespace Vista
             this.tbxDescripcion.Multiline = true;
             this.tbxDescripcion.Name = "tbxDescripcion";
             this.tbxDescripcion.Size = new System.Drawing.Size(288, 78);
-            this.tbxDescripcion.TabIndex = 19;
+            this.tbxDescripcion.TabIndex = 2;
+            this.tbxDescripcion.TextChanged += new System.EventHandler(this.tbxDescripcion_TextChanged);
             // 
             // lblImagenUrl
             // 
@@ -300,7 +305,7 @@ namespace Vista
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmCreaActuliza";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Administracion de articulos";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.frmCreaActuliza_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagenUrl)).EndInit();
             this.ResumeLayout(false);

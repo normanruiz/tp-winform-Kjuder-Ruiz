@@ -1,13 +1,3 @@
-D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\bin\Debug\Vista.exe.config
-D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\bin\Debug\Vista.exe
-D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\bin\Debug\Vista.pdb
-D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.csproj.AssemblyReference.cache
-D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.frmListado.resources
-D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.Properties.Resources.resources
-D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.csproj.GenerateResource.cache
-D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.csproj.CoreCompileInputs.cache
-D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.exe
-D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.pdb
 C:\Users\juamp\Desktop\Nueva carpeta\tp-winform-Kjuder-Ruiz\Vista\bin\Debug\Vista.exe.config
 C:\Users\juamp\Desktop\Nueva carpeta\tp-winform-Kjuder-Ruiz\Vista\bin\Debug\Vista.exe
 C:\Users\juamp\Desktop\Nueva carpeta\tp-winform-Kjuder-Ruiz\Vista\bin\Debug\Vista.pdb
@@ -20,10 +10,20 @@ C:\Users\juamp\Desktop\Nueva carpeta\tp-winform-Kjuder-Ruiz\Vista\obj\Debug\Vist
 C:\Users\juamp\Desktop\Nueva carpeta\tp-winform-Kjuder-Ruiz\Vista\obj\Debug\Vista.exe
 C:\Users\juamp\Desktop\Nueva carpeta\tp-winform-Kjuder-Ruiz\Vista\obj\Debug\Vista.pdb
 C:\Users\juamp\Desktop\Nueva carpeta\tp-winform-Kjuder-Ruiz\Vista\obj\Debug\Vista.Detalles.resources
-D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.Detalles.resources
-D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.frmCreaActuliza.resources
-D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\bin\Debug\Modelo.dll
-D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\bin\Debug\Modelo.pdb
-D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.csproj.CopyComplete
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\bin\Debug\Vista.exe.config
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\bin\Debug\Vista.exe
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\bin\Debug\Vista.pdb
 D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\bin\Debug\Controlador.dll
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\bin\Debug\Modelo.dll
 D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\bin\Debug\Controlador.pdb
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\bin\Debug\Modelo.pdb
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.csproj.AssemblyReference.cache
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.frmCreaActuliza.resources
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.Detalles.resources
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.frmListado.resources
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.Properties.Resources.resources
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.csproj.GenerateResource.cache
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.csproj.CoreCompileInputs.cache
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.csproj.CopyComplete
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.exe
+D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Vista\obj\Debug\Vista.pdb

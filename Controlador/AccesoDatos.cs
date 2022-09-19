@@ -38,14 +38,20 @@ namespace Controlador
 
         public void setearConsulta(string consulta)
         {
-            comando.CommandType = System.Data.CommandType.Text;
-            comando.CommandText = consulta;
+            try
+            {
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = consulta;
+            }
+            catch (Exception excepcion)
+            {
+                throw excepcion;
+            }
         }
 
         public void ejecutarLectura()
         {
             comando.Connection = conexion;
-
             try
             {
                 lector = comando.ExecuteReader();
@@ -58,11 +64,19 @@ namespace Controlador
 
         public void cerrar()
         {
-            if (lector != null)
+            try
             {
-                lector.Close();
+                if (lector != null)
+                {
+                    lector.Close();
+                }
+                conexion.Close();
+
             }
-            conexion.Close();
+            catch (Exception excepcion)
+            {
+                throw excepcion;
+            }
         }
 
         public void ejecutarAccion()

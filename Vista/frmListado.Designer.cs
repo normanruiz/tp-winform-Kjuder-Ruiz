@@ -51,7 +51,6 @@ namespace Vista
             this.lblTitulo.Size = new System.Drawing.Size(158, 20);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Listado de articulos";
-            this.lblTitulo.Click += new System.EventHandler(this.label1_Click);
             // 
             // dgvListado
             // 
@@ -86,7 +85,7 @@ namespace Vista
             this.tbxFiltro.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbxFiltro.Name = "tbxFiltro";
             this.tbxFiltro.Size = new System.Drawing.Size(367, 23);
-            this.tbxFiltro.TabIndex = 3;
+            this.tbxFiltro.TabIndex = 0;
             this.tbxFiltro.TextChanged += new System.EventHandler(this.tbxFiltro_TextChanged);
             // 
             // btnCrear
@@ -97,7 +96,7 @@ namespace Vista
             this.btnCrear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(140, 31);
-            this.btnCrear.TabIndex = 4;
+            this.btnCrear.TabIndex = 3;
             this.btnCrear.Text = "Crear";
             this.btnCrear.UseVisualStyleBackColor = false;
             this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
@@ -110,7 +109,7 @@ namespace Vista
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(140, 31);
-            this.btnActualizar.TabIndex = 6;
+            this.btnActualizar.TabIndex = 4;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
@@ -123,7 +122,7 @@ namespace Vista
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(140, 31);
-            this.btnEliminar.TabIndex = 7;
+            this.btnEliminar.TabIndex = 5;
             this.btnEliminar.Text = "Destruir";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -136,10 +135,10 @@ namespace Vista
             this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(140, 31);
-            this.btnSalir.TabIndex = 8;
+            this.btnSalir.TabIndex = 6;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // lblFiltro
             // 

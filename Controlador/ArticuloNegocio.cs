@@ -18,10 +18,10 @@ namespace Controlador
             try
             {
                 Conexion.conectar();
-                Conexion.setearConsulta("SELECT a.[Id], a.[Codigo], a.[Nombre], a.[Descripcion], a.[IdMarca], m.[Descripcion], a.[IdCategoria], c.[Descripcion], a.[ImagenUrl], a.[Precio] FROM [CATALOGO_DB].[dbo].[ARTICULOS] AS a WITH (NOLOCK) INNER JOIN [CATALOGO_DB].[dbo].[CATEGORIAS] AS c WITH (NOLOCK)ON c.[Id] = a.[IdCategoria] INNER JOIN [CATALOGO_DB].[dbo].[MARCAS] AS m WITH (NOLOCK)ON m.[Id] = a.[IdCategoria];");
+                Conexion.setearConsulta("SELECT a.[Id], a.[Codigo], a.[Nombre], a.[Descripcion], a.[IdMarca], m.[Descripcion] AS 'Marca', a.[IdCategoria], c.[Descripcion] AS 'Categoria', a.[ImagenUrl], a.[Precio] FROM [CATALOGO_DB].[dbo].[ARTICULOS] AS a WITH (NOLOCK) INNER JOIN [CATALOGO_DB].[dbo].[CATEGORIAS] AS c WITH (NOLOCK) ON c.[Id] = a.[IdCategoria] INNER JOIN [CATALOGO_DB].[dbo].[MARCAS] AS m WITH (NOLOCK) ON m.[Id] = a.[IdCategoria];");
                 Conexion.ejecutarLectura();
-                
-                while(Conexion.Lector.Read())
+
+                while (Conexion.Lector.Read())
                 {
                     articulo = new Articulo();
                     articulo.Id = (Int32)Conexion.Lector["Id"];
@@ -30,15 +30,22 @@ namespace Controlador
                     articulo.Descripcion = (string)Conexion.Lector["Descripcion"];
                     articulo.marca = new Marca();
                     articulo.marca.Id = (Int32)Conexion.Lector["IdMarca"];
-                    articulo.marca.Descripcion = (string)Conexion.Lector["Descripcion"];
+                    articulo.marca.Descripcion = (string)Conexion.Lector["Marca"];
                     articulo.categoria = new Categoria();
                     articulo.categoria.Id = (Int32)Conexion.Lector["IdCategoria"];
-                    articulo.categoria.Descripcion = (string)Conexion.Lector["Descripcion"];
-                    articulo.ImagenUrl = (string)Conexion.Lector["ImagenUrl"];
+                    articulo.categoria.Descripcion = (string)Conexion.Lector["Categoria"];
+                    if (Conexion.Lector["ImagenUrl"] is DBNull || (string)Conexion.Lector["ImagenUrl"] == "")
+                    {
+                        articulo.ImagenUrl = "Sin imagen";
+                    }
+                    else
+                    {
+                        articulo.ImagenUrl = (string)Conexion.Lector["ImagenUrl"];
+                    }
                     articulo.Precio = (Decimal)Conexion.Lector["Precio"];
                     listaArticulos.Add(articulo);
                 }
-                
+
                 return listaArticulos;
             }
             catch (Exception excepcion)
@@ -49,7 +56,6 @@ namespace Controlador
             {
                 Conexion.cerrar();
             }
-
         }
 
         public void crear(Articulo articulo)

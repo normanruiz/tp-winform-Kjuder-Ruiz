@@ -132,5 +132,34 @@ namespace Controlador
                 conexion.cerrar();
             }
         }
+
+        public Boolean encontrarCodigo(string codigo)
+        {
+            AccesoDatos conexion = new AccesoDatos();
+            try
+            {
+                conexion.conectar();
+                conexion.setearConsulta("SELECT a.[Codigo] FROM [CATALOGO_DB].[dbo].[ARTICULOS] AS a WITH (NOLOCK) WHERE a.[Codigo] = @codigo;");
+                conexion.setearParametro("@codigo", codigo);
+                conexion.ejecutarLectura();
+                if (conexion.Lector.Read())
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception excepcion)
+            {
+                throw excepcion;
+            }
+            finally
+            {
+                conexion.cerrar();
+            }
+
+        }
     }
 }

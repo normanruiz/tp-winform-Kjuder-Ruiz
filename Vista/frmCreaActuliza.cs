@@ -144,6 +144,15 @@ namespace Vista
                     MessageBox.Show("El codigo no puede estar vacio.", "Validando Codigo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     estado = false;
                 }
+                else if (articulo == null)
+                {
+                    if (validarCodigo(tbxCodigo.Text))
+                    {
+                        tbxCodigo.BackColor = Color.Firebrick;
+                        MessageBox.Show("El codigo ya existe, intente con otro.", "Validando Codigo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        estado = false;
+                    }
+                }
 
                 //Validar Nombre
                 if (tbxNombre.Text.Length == 0)
@@ -200,6 +209,22 @@ namespace Vista
             }
         }
 
+        private Boolean validarCodigo(string codigo)
+        {
+            Boolean existe = true;
+            ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+            
+            try
+            {
+                existe = articuloNegocio.encontrarCodigo(codigo);
+                return existe;
+            }
+            catch (Exception excepcion)
+            {
+                MessageBox.Show("Todabia no se que paso... Dios!!!!!", "Creando articulo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return existe;
+            }
+        }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             try

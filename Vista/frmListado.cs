@@ -35,12 +35,31 @@ namespace Vista
 
         private void btnDetalle_Click(object sender, EventArgs e)
         {
-            foreach ( var item in Application.OpenForms)
+            try
             {
-                if (item.GetType() == typeof(Detalles)) return;
+                if (dgvListado.CurrentRow != null)
+                {
+                    Articulo articulo = (Articulo)dgvListado.CurrentRow.DataBoundItem;
+                    foreach (var item in Application.OpenForms)
+                    {
+                        if (item.GetType() == typeof(Detalles)) return;
+                    }
+                    Detalles formulario = new Detalles(articulo);
+                    formulario.Show();
+                    actualizarListado();
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar un elemento primero.", "Actualizar articulo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
-            Detalles formulario = new Detalles();
-            formulario.Show();
+            catch (Exception excepcion)
+            {
+                MessageBox.Show(excepcion.ToString(), "Actualizando articulo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+
+
 
         }
 

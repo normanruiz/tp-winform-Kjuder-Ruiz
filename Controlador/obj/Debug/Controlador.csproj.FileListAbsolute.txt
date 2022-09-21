@@ -7,3 +7,12 @@ D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Controlador\obj\Debug\Controlador.cspro
 D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Controlador\obj\Debug\Controlador.csproj.CopyComplete
 D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Controlador\obj\Debug\Controlador.dll
 D:\source\repos\C#\TPWinForm_Kjuder_Ruiz\Controlador\obj\Debug\Controlador.pdb
+C:\Users\juamp\Desktop\Lab_3\Tp_Productos\tp-winform-Kjuder-Ruiz\Controlador\bin\Debug\Controlador.dll
+C:\Users\juamp\Desktop\Lab_3\Tp_Productos\tp-winform-Kjuder-Ruiz\Controlador\bin\Debug\Controlador.pdb
+C:\Users\juamp\Desktop\Lab_3\Tp_Productos\tp-winform-Kjuder-Ruiz\Controlador\bin\Debug\Modelo.dll
+C:\Users\juamp\Desktop\Lab_3\Tp_Productos\tp-winform-Kjuder-Ruiz\Controlador\bin\Debug\Modelo.pdb
+C:\Users\juamp\Desktop\Lab_3\Tp_Productos\tp-winform-Kjuder-Ruiz\Controlador\obj\Debug\Controlador.csproj.AssemblyReference.cache
+C:\Users\juamp\Desktop\Lab_3\Tp_Productos\tp-winform-Kjuder-Ruiz\Controlador\obj\Debug\Controlador.csproj.CoreCompileInputs.cache
+C:\Users\juamp\Desktop\Lab_3\Tp_Productos\tp-winform-Kjuder-Ruiz\Controlador\obj\Debug\Controlador.csproj.CopyComplete
+C:\Users\juamp\Desktop\Lab_3\Tp_Productos\tp-winform-Kjuder-Ruiz\Controlador\obj\Debug\Controlador.dll
+C:\Users\juamp\Desktop\Lab_3\Tp_Productos\tp-winform-Kjuder-Ruiz\Controlador\obj\Debug\Controlador.pdb
